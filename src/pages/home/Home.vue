@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import HomeHeader from './home/components/Header.vue'
-import HomeSwiper from './home/components/Swiper.vue'
-import HomeIcons from './home/components/Icons.vue'
-import HomeRecommend from './home/components/Recommend.vue'
-import HomeWeekend from './home/components/Weekend.vue'
+import HomeHeader from './components/Header.vue'
+import HomeSwiper from './components/Swiper.vue'
+import HomeIcons from './components/Icons.vue'
+import HomeRecommend from './components/Recommend.vue'
+import HomeWeekend from './components/Weekend.vue'
 import axios from 'axios'
 export default {
   name: 'Home',
@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('/static/mock/index.json')
+      axios.get('/api/index.json')
         .then(res => this.getHomeSucc(res))
     },
     getHomeSucc (res) {

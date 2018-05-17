@@ -5,6 +5,7 @@
       <li
         class="item border-bottom"
         v-for="item in list"
+        :key="item.id"
       >
         <div class="item-img-wrapper">
           <img
