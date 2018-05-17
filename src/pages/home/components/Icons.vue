@@ -86,22 +86,24 @@ export default {
     overflow: hidden
     height: 0
     padding-bottom: 50%
-  .icon
-    overflow: hidden
-    float: left
-    width: 25%
-    height: 0
-    padding-bottom: 25%
-    text-align: center
-    .icon-img
-      display: inline-block
-      width: 1.1rem
-      height: 1.1rem
-      .icon-img-content
-        width: 100%
-    .icon-desc
-      margin-top: .1rem
-      font-size: .28rem
-      color: $darkTextColor
-      ellipsis()
+  .icons
+    margin-top: .2rem
+    .icon
+      overflow: hidden
+      float: left
+      width: 25%
+      height: 0
+      padding-bottom: 25%
+      text-align: center
+      .icon-img
+        display: inline-block
+        width: 1.1rem
+        height: 1.1rem
+        .icon-img-content
+          width: 100%
+      .icon-desc
+        margin-top: .1rem
+        font-size: .28rem
+        color: $darkTextColor
+        ellipsis()
 </style>
