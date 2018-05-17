@@ -2,13 +2,17 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom">
+      <li
+        class="item border-bottom"
+        v-for="item of list"
+        :key="item.id">
         <img
           class="item-img"
-          src="http://img1.qunarzz.com/wugc/p3/201206/02/44c1fe10b91aed6793835fbb.jpg_200x200_e7236f41.jpg">
+          :src="item.imgUrl"
+        >
         <div class="item-info">
-          <p class="item-title">aaaaaaaaa</p>
-          <p class="item-desc">bbbbbbbbbbb</p>
+          <p class="item-title">{{item.title}}</p>
+          <p class="item-desc">{{item.desc}}</p>
           <button class="item-button">查看详情</button>
         </div>
       </li>
@@ -19,8 +23,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {}
+  props: {
+    list: Array
   }
 }
 </script>
@@ -50,7 +54,7 @@ export default {
       .item-desc
         line-height: .4rem
         color: #ccc
-        ellipse()
+        ellipsis()
       .item-button
         line-height: .44rem
         margin-top: .16rem

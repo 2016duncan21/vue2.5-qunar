@@ -8,13 +8,19 @@
       输入城市景点游玩主题
     </div>
     <div class="header-right">
-      成都
+      {{city}}
       <span class="iconfont arrow-icon">&#xe64a;</span>
     </div>
   </div>
 </template>
 
 <script>
+export default {
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
+}
 </script>
 <style lang="stylus" scoped type="text/stylus">
   @import '~styles/varibles.styl'
