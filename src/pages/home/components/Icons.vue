@@ -27,7 +27,9 @@ export default {
   },
   data () {
     return {
-      swiperOption: {}
+      swiperOption: {
+        pagination: '.swiper-pagination'
+      }
     }
   },
   computed: {
